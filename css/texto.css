@@ -1,0 +1,30 @@
+.sticker {
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); 
+  color: #000000;
+  background-color: rgba(240, 241, 235, 0.9); 
+  padding: 20px;
+}
+.sticker h1, .sticker h2, .sticker h3, .sticker h4,{
+  color: #383D3D;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4,{
+  color: #383D3D;
+}
+
+.sticker-dark {
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); 
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.9); 
+  padding: 20px;
+}
+.justificado {
+  text-align: justify;
+}
+.justificado ul{
+  text-align: justify;
+}
+.justificado p{
+  text-align: justify;
+}

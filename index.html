@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Seminário PET - Introdução ao GNU/Linux</title>
+
+		<meta name="description" content="Seminário do PET do curso de Ciência da Computação sobre o sistema operacional GNU/Linux. Um seminário voltado aos alunos do BTI da UFRN.">
+		<meta name="author" content="Josivan Medeiros da Silva Gois">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/serif.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+    <!-- Audiowide Font para o logo do PET -->
+    <!--<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>-->
+		<link rel="stylesheet" href="css/imagens.css">
+		<link rel="stylesheet" href="css/texto.css">
+		<link rel="stylesheet" href="css/terminal.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <!-- 1: Capa -->
+				<section>
+					<a href="https://revealjs.com">
+						<img src="imgs/petcc-logo.svg" alt="logo do PETCC" style="height: 200px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h3>Seminário PETCC</h3>
+					<h3>Introdução ao Linux</h3>
+					<p>
+						<small>Josivan Medeiros da Silva Gois</small>
+            <small>Programa de Educação Tutorial do Curso de Ciência da Computação (PETCC)<br>
+                   Departamento de Informática e Matemática Aplicada (DIMAp)<br>
+						       Universidade Federal do Rio Grande do Norte (UFRN)</small>
+					</p>
+				</section>
+
+				<!-- 2: O Sistema Operacional GNU/Linux -->
+        <section>
+          <section>
+            <h2>O Sistema Operacional GNU/Linux</h2>
+          </section>
+          <section data-auto-animate>
+            <h3>O Sistema Operacional GNU/Linux</h3>
+            <div class="sticker" style="position: absolute; width: 25%; left: 0; padding: 5px 20px; font-size: 20px; text-align: center;">
+              <img src="imgs/Richard_Stallman_-_Fête_de_l'Humanité_2014_-_010.jpg" alt="Richard Stallman - Fête de l'Humanité 2014"/>
+              <p>Richard Stallman, criador do projeto GNU</p>
+            </div>
+            <div class="" style="position: absolute; width: 65%; right: 0; padding: 20px; font-size: 35px ; text-align: left;">
+              <ul>
+                <li class="fragment" id="rs1">Em 1983 Richard Stallman começou o Projeto GNU;</li>
+                <li class="fragment" id="rs2">O objetivo era criar um Sistema Operacional compatível com Unix porém, 
+                  diferente deste, o GNU seria totalmente Open Source;</li>
+                <li class="fragment">No começo dos anos 90 o Sistema estava quase pronto, faltava as funcionalidades de baixo nível como drivers e o kernel (núcleo) do sistema.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section data-auto-animate>
+            <h3>O Sistema Operacional GNU/Linux</h3>
+            <div class="sticker" style="position: absolute; width: 25%; left: 0; padding: 5px 20px; font-size: 20px; text-align: center;">
+              <img src="imgs/Linus_Torvalds.jpg" alt="Linux Torvalds"/>
+              <p>Linus Torvalds, criador do kernel Linux</p>
+            </div>
+            <div class="" style="position: absolute; width: 65%; right: 0; padding: 20px; font-size: 30px ; text-align: left;">
+              <ul>
+                <li class="fragment">Em 1991, Linus Torvald, enquanto cursava Ciência da Computação na Universidade de Helsinki começou um projeto que mais tarde viria a se tornar o kernel Linux;</li>
+                <li class="fragment">Ele usou o gcc, o GNU C Compiler,que até hoje é a opçãao utilizada para compilar o kernel Linux;</li>
+                <li class="fragment">Em 1992 Linus mudou a licença do kernel para GPL, o que possibilitou a integração com o GNU de forma a manter o Sistema Open Source;</li>
+              </ul>
+            </div>
+          </section>
+
+          <section data-auto-animate>
+            <h3>O Sistema Operacional GNU/Linux</h3>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Gnulinux.svg/130px-Gnulinux.svg.png" alt="Linux Torvalds"/>
+            <div class="sticker" style="margin: auto; width: 60%; margin-right: auto; padding: 20px; font-size: 30px ;">
+              <ul>
+                <li>Hoje o kernel Linux é mantido por várias empresas e pode ser encontrado em: <a href="http://www.kernel.org" target="_blank">http://www.kernel.org</a></li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+				<!-- 3: Distribuições -->
+				<section class="distros">
+          <section>
+            <h2>Distribuições</h2>
+          </section>
+
+          <section data-auto-animate>
+            <h3>Distribuições</h3>
+            <div class="justificado" style="padding: 20px 50px; font-size: 24px; text-align: justify;">
+              <ul>
+                <li><p>Existe uma grande variedade de sistemas operacionais baseados em GNU/Linux, cada um com um objetivo específico;</p></li>
+                <li class="fragment"><p>Como o kernel linux dá suporte a várias arquiteturas de processadores, existem sistemas linux voltados para servidores, para supercomputadores, sistemas embarcados/dispositivos IoT, além dos sistemas para uso pessoal;</p></li>
+                <li class="fragment"><p>As versões do sistema operacional são chamadas de distribuição (informalmente chamada de distro) e cada uma possui seu conjunto de programas padrão, gerenciador de pacotes (aplicações) e seus repositórios de programas.</p></li>
+              </ul>
+            </div>
+          </section>
+
+          <section data-auto-animate>
+            <h3>Distribuições</h3>
+            <div class="" style="position: absolute; width: 50%; left: -15%; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+              <p>Apesar do grande número de distribuições, podemos dividir elas por "famílias" nomeadas pela distribuição na qual elas são baseadas.</p>
+              <p>Essas famílias são:</p>
+              <ul>
+                <li class="fragment">Família Debian</li>
+                <li class="fragment">Família Slackware</li>
+                <li class="fragment">Família Redhat</li>
+                <li class="fragment">Família Enoch/Gentoo</li>
+                <li class="fragment">Família Archlinux</li>
+              </ul>
+            </div>
+            <div class="fragment" style="position: absolute; width: 50%; left: 56%; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+              <p>Também podemos classificar as distribuições em dois tipos de acordo com a sua forma de atualização:</p>
+              <ul>
+                <li class="fragment">Long Term Support (LTS)</li>
+                <li class="fragment">Rolling Release</li>
+              </ul>
+            </div>
+            <div class="fragment sticker" style="position: absolute; width: 50%; top: 44%; left: 60%; padding: 0px 20px; font-size: 24px ; text-align: justify;">
+              <p>As distribuições LTS lançam novas versões mantendo atualizações de versões antigas, semelhante ao que ocorre no Windows.</p>
+            </div>
+            <div class="fragment sticker" style="position: absolute; width: 50%; top: 64%; left: 60%; padding: 0px 20px; font-size: 24px ; text-align: justify;">
+              <p>As distribuições Rolling Release lançam atualizações contínuas de modo que a cada atualização você sempre terá a versão mais recente do sistema.</p>
+            </div>
+            <div>
+              <img style="margin-top: 0;" width="15%" src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+          </section>
+
+          <section data-auto-animate>
+            <div class="sticker" style="position: absolute; width: 40%; left: -150px; padding: 20px; font-size: 20px; text-align: justify;">
+              <h2>Família Debian</h2>
+              <p>Família de Distribuições baseadas no Debian.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 40%; top: 250px; left: -150px; padding: 20px; font-size: 20px; text-align: justify;">
+              <p>A distribuição que dá origem à família é o Debian. Ainda hoje é bastante utilizada em servidores devido a sua estabilidade.</p>
+            </div>
+            <div class="familia-debian" z-index="-1">
+              <img src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 100%; left: 40px; top: 0px; padding: 10px 20px; font-size: 20px; text-align: justify;">
+              <img width="100%" src="imgs/distros/Debian10_Gnome.png" alt=""/>
+              Debian 10 Buster
+            </div>
+          </section>
+
+          <section data-auto-animate>
+            <div class="sticker" style="position: absolute; width: 40%; left: -150px; padding: 20px; font-size: 20px; text-align: justify;">
+              <h2>Ubuntu</h2>
+              <p>O Ubuntu é uma das distribuições mais famosas baseadas no Debian.</p>
+            </div>
+            <div class="ubuntu" z-index="-1">
+              <img src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 100%; left: 40px; top: 5px; padding: 20px; font-size: 20px; text-align: justify;">
+              <img width="100%" src="imgs/distros/Ubuntu-20.04.png" alt=""/>
+              <p>Ubuntu 20.04 Focal Fossa.</p>
+            </div>
+          </section>
+
+          <section data-auto-animate>
+            <div class="sticker" style="position: absolute; width: 40%; left: -15%; padding: 20px; font-size: 20px; text-align: left;">
+              <h2>Família Slackware</h2>
+              <p>Família das distribuições baseadas na distribuição Slackware.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 40%; top: 410px; left: -15%; padding: 20px; font-size: 20px; text-align: justify;">
+              <p>É a distribuição Linux mais antiga ainda em desenvolvimento.</p>
+              <p>Atualmente o Slackware é rolling release.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 75%; left: 300px; top: 0px; padding: 20px; font-size: 20px; text-align: justify;">
+              <img width="100%" src="imgs/distros/slackware_kde.png" alt=""/>
+              Slackware
+            </div>
+            <div class="familia-slackware">
+              <img src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+          </section>
+
+          <!-- Família Redhat -->
+          <section data-auto-animate>
+            <div class="sticker" style="position: absolute; width: 40%; left: -15%; top:50px; padding: 20px; font-size: 20px; text-align: left;">
+              <h2>Família Redhat</h2>
+              <p>Família das distribuições baseadas na distribuição Red Hat Linux.</p>
+            </div>
+            <div class="sticker" style="position: absolute; width: 40%; left: -15%; top:250px; padding: 20px; font-size: 20px; text-align: justify;">
+              <p>Atualmente o Red Hat Linux virou o Red Hat Enterprise Linux (RHEL), uma distribuição comercial (não gratuita) e tem como público alvo o uso em servidores.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 100%; left: 0px; top: 0px; padding: 20px; font-size: 20px; text-align: justify;">
+              <img width="100%" src="imgs/distros/redhat.png" alt=""/>
+              Red Hat Enterprise Linux 8
+            </div>
+            <div class="familia-redhat">
+              <img src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div class="sticker" style="position: absolute; width: 40%; left: -15%; padding: 20px; font-size: 20px; text-align: left;">
+              <h2>Família Gentoo</h2>
+              <p>Família das distribuições baseadas na distribuição Enoch, que mais tarde passa a se chamar Gentoo.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 40%; top: 10%; left: -15%; padding: 5px 20px; font-size: 20px; text-align: justify;">
+              <p>O Gentoo é Rolling Release deste o seu lançamento.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 75%; left: 35%; top: 0px; padding: 20px; font-size: 20px; text-align: justify;">
+              <img width="100%" src="imgs/distros/gentoo_KDE.png" alt=""/>
+              Gentoo
+            </div>
+            <div class="familia-gentoo">
+              <img src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div class="sticker" style="position: absolute; width: 40%; left: -15%; padding: 20px; font-size: 20px; text-align: left;">
+              <h2>Família Archlinux</h2>
+              <p>Família das distribuições baseadas na distribuição Archlinux.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 40%; top: 10%; left: -15%; padding: 5px 20px; font-size: 20px; text-align: justify;">
+              <p>Assim como o Gentoo, o Archlinux é Rolling Release deste o seu lançamento.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 110%; left: 0px; top: 0px; padding: 0px 20px; font-size: 20px; text-align: justify;">
+              <img width="100%" src="imgs/distros/archlinux.png" alt=""/>
+              Archlinux (personalizado, por padrão o Archlinux não tem interface gráfica)
+            </div>
+            <div class="familia-archlinux">
+              <img src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div class="sticker" style="position: absolute; width: 40%; left: -15%; padding: 20px; font-size: 20px; text-align: left;">
+              <h2>Manjaro</h2>
+              <p>O Manjaro é uma distribuição baseada em Archlinux que já vem com interface gráfica e utilitários que a maioria dos sistemas operacionais de usuários comuns têm, mas que estão ausentes no Archlinux.</p> 
+              <p>Por esse motivo é conhecido como o "Archlinux para iniciantes".</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 110%; left: -50px; top: 0px; padding: 0px 20px; font-size: 20px; text-align: justify;">
+              <img width="100%" src="imgs/distros/manjaro.png" alt=""/>
+              Manjaro
+            </div>
+            <div class="manjaro">
+              <img src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div class="sticker" style="position: absolute; width: 40%; left: 0px; padding: 20px; font-size: 20px; text-align: left;">
+              <h2>Android</h2>
+              <p>O Android, apesar de não utilizar o GNU, utiliza uma versão do kernel Linux.</p>
+            </div>
+            <div class="sticker fragment" style="position: absolute; width: 40%; left: 500px; padding: 20px; font-size: 20px; text-align: left;">
+              <p>Essa versão do kernel linux modificado é desenvolvido por um consorcio de
+              desenvolvedores conhecido como Open Handset Alliance (OHA).</p>
+            </div>
+            <div class="familia-android">
+              <img src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+          </section>
+
+          <section data-auto-animate>
+            <h3>Distribuições</h3>
+            <div class="sticker" style="position: absolute; width: 40%; top:15%; left: -10%; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+              <p>Para ver a imagem completa da linha do tempo das distribuições Linux 
+              <a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg" target="_blank">
+                clique aqui
+              </a>.</p>
+            </div>
+            <div class="sticker" style="position: absolute; width: 40%; top: 55%; left: -10%; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+              <p>Veja mais informações sobre as distribuições no site
+              <a href="https://distrowatch.com/" target="_blank">
+                Distrowatch
+              </a>.</p>
+            </div>
+            <div class="sticker" style="position: absolute; width: 40%; top:35%; left: 60%; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+              <p>Para ver uma comparação entre as distribuições
+              <a href="https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions" target="_blank">
+                clique aqui
+              </a>.</p>
+            </div>
+            <div>
+              <img style="margin-top: 0;" width="15%" src="imgs/Linux_Distribution_Timeline.svg" alt=""/>
+            </div>
+          </section>
+				</section>
+
+				<!-- 4: Ambientes Desktop -->
+				<section>
+					<section data-auto-animate>
+						<h2>Ambientes Desktop</h2>
+					</section>
+					<section data-auto-animate>
+            <div class="" style="position: absolute; width: 100%; top:-50px; left: auto; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+						<h3>Ambientes Desktop</h3>
+              <p>Ambientes Desktop são uma abstração de um ambiente de trabalho, isto é, eles tentam simular uma mesa de trabalho com ferramentas.</p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; position: absolute; font-size: 20px;">
+              <img width="100%" src="imgs/DEs/linux_mint_20_cinnamon.png" alt=""/>
+              <p>
+              Ambiente Desktop Cinamon
+              </p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; left: 37%; position: absolute; font-size: 20px;">
+              <img width="100%" src="imgs/DEs/elementary_OS_5_1_Hera.png" alt=""/>
+              <p>
+              Ambiente Desktop Panteon
+              </p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; left: 74%; position: absolute; font-size: 20px;">
+              <img width="100%" src="imgs/DEs/Deepin.png" alt=""/>
+              <p>
+              Ambiente Desktop DDE (Deepin Desktop Environment)
+              </p>
+            </div>
+					</section>
+
+					<section data-auto-animate>
+            <div class="" style="position: absolute; width: 100%; top:-50px; left: auto; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+						<h3>Ambientes Desktop</h3>
+              <p>Ambientes Desktop são uma abstração de um ambiente de trabalho, isto é, eles tentam simular uma mesa de trabalho com ferramentas.</p>
+            </div>
+            <div class="sticker" style="width: 100%; top: 0px; position: absolute; font-size: 20px;">
+              <img width="100%" src="imgs/DEs/linux_mint_20_cinnamon.png" alt=""/>
+              <p>
+              Ambiente Desktop Cinamon
+              </p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; left: 37%; position: absolute; font-size: 20px; z-index: -1;">
+              <img width="100%" src="imgs/DEs/elementary_OS_5_1_Hera.png" alt=""/>
+              <p>
+              Ambiente Desktop Panteon
+              </p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; left: 74%; position: absolute; font-size: 20px; z-index: -1;">
+              <img width="100%" src="imgs/DEs/Deepin.png" alt=""/>
+              <p>
+              Ambiente Desktop DDE (Deepin Desktop Environment)
+              </p>
+            </div>
+					</section>
+					<section data-auto-animate>
+            <div class="" style="position: absolute; width: 100%; top:-50px; left: auto; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+						<h3>Ambientes Desktop</h3>
+              <p>Ambientes Desktop são uma abstração de um ambiente de trabalho, isto é, eles tentam simular uma mesa de trabalho com ferramentas.</p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; position: absolute; font-size: 20px; z-index:-1;">
+              <img width="100%" src="imgs/DEs/linux_mint_20_cinnamon.png" alt=""/>
+              <p>
+              Ambiente Desktop Cinamon
+              </p>
+            </div>
+            <div class="sticker" style="width: 100%; top: 0; left: 0; position: absolute; font-size: 20px;">
+              <img width="100%" src="imgs/DEs/elementary_OS_5_1_Hera.png" alt=""/>
+              <p>
+              Ambiente Desktop Panteon
+              </p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; left: 74%; position: absolute; font-size: 20px; z-index: -1;">
+              <img width="100%" src="imgs/DEs/Deepin.png" alt=""/>
+              <p>
+              Ambiente Desktop DDE (Deepin Desktop Environment)
+              </p>
+            </div>
+					</section>
+					<section data-auto-animate>
+            <div class="" style="position: absolute; width: 100%; top:-50px; left: auto; padding: 20px 40px; font-size: 24px ; text-align: justify;">
+						<h3>Ambientes Desktop</h3>
+              <p>Ambientes Desktop são uma abstração de um ambiente de trabalho, isto é, eles tentam simular uma mesa de trabalho com ferramentas.</p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; position: absolute; font-size: 20px; z-index: -1;">
+              <img width="100%" src="imgs/DEs/linux_mint_20_cinnamon.png" alt=""/>
+              <p>
+              Ambiente Desktop Cinamon
+              </p>
+            </div>
+            <div class="sticker" style="width: 30%; top: 150px; left: 37%; position: absolute; font-size: 20px; z-index: -1;">
+              <img width="100%" src="imgs/DEs/elementary_OS_5_1_Hera.png" alt=""/>
+              <p>
+              Ambiente Desktop Panteon
+              </p>
+            </div>
+            <div class="sticker" style="width: 100%; top: 0; left: 0; position: absolute; font-size: 20px;">
+              <img width="100%" src="imgs/DEs/Deepin.png" alt=""/>
+              <p>
+              Ambiente Desktop DDE (Deepin Desktop Environment)
+              </p>
+            </div>
+					</section>
+					<section data-auto-animate>
+						<h3>Ambientes Desktop</h3>
+            <div class="" style="width: 80%; top: 0; margin: auto; font-size: 24px; padding: 40px; text-align: justify;">
+              <ul style="text-align: justify;">
+                <li><p>Um ambiente desktop é composto por um gerenciador de janelas, widgets e um
+                  conjunto de programas;</p></li>
+                <li class="fragment"><p>O gerenciador de janelas é responsável pelo posicionamento e aparência das
+                  janelas;</p></li>
+                <li class="fragment"><p>Os ambientes desktop também fornecem widgets, componentes prontos para
+                  desenvolvedores usarem como botões, caixas de diálogos, etc;</p></li>
+                <li class="fragment"><p>Mesmo que a maioria das distribuições venham com um ambiente desktop padrão, é possível instalar qualquer ambiente em qualquer distribuição.</p></li>
+              </ul>
+            </div>
+					</section>
+					<section data-auto-animate>
+						<h3>Ambientes Desktop</h3>
+            <div class="sticker" style="width: 60%; top: 0; margin: auto; font-size: 24px; padding: 40px; text-align: justify;">
+                <p>Os ambientes desktop mais famosos do linux são:</p>
+              <ul style="text-align: justify;">
+                <li>GNOME </li>
+                <li>KDE Plasma </li>
+                <li>xfce </li>
+                <li>Cinnamon </li>
+                <li>LXQt </li>
+                <li>MATE </li>
+              </ul>
+            </div>
+            <div class="r-stack" style="position: absolute; top: 0; left: 0; padding: 1px 1px; font-size:22px ;">
+              <div class="fragment sticker">
+                <img src="imgs/DEs/GNOME.png" width="100%">
+                <p>GNOME</p>
+              </div>
+              <div class="fragment sticker">
+                <img src="imgs/DEs/KDE_Plasma_5.16.png" width="100%">
+                <p>KDE Plasma</p>
+              </div>
+              <div class="fragment sticker">
+                <img src="imgs/distros/manjaro.png" width="100%">
+                <p>xfce</p>
+              </div>
+              <div class="fragment sticker">
+                <img src="imgs/DEs/linux_mint_20_cinnamon.png" width="100%">
+                <p>Cinnamon</p>
+              </div>
+              <div class="fragment sticker">
+                <img src="imgs/DEs/LXQt.png" width="100%">
+                <p>LXQt</p>
+              </div>
+              <div class="fragment sticker">
+                <img src="imgs/DEs/Linux_Mint_20_MATE.png" width="100%">
+                <p>MATE</p>
+              </div>
+            </div>
+          </section>
+          <!-- Gerenciadores de Exibição -->
+          <section data-background-video="videos/lightdm.mp4" 
+                   data-background-video-loop data-background-video-muted>
+            <div class="sticker fragment fade-out" style="width: 50%; margin: auto;">
+              <h3>Gerenciadores de Exibição</h3>
+            </div>
+            <div class="sticker fragment fade-in" style="font-size:24px; text-align: justify; width: 50%; top: -180px; left:-12%; position: absolute;">
+              <p>Gerenciadores de exibição são programas que funcionam como um frontend para inicialização do sistema.</p>
+              <p>Fornecem uma interface para login de usuário e seleção de <strong>ambiente desktop</strong>.</p>
+            </div>
+          </section>
+				</section>
+
+
+				<!-- 5: Gerenciadores de Pacotes -->
+				<section>
+          <section>
+            <h2>Gerenciadores de Pacotes</h2>
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="text-align: justify; font-size: 28px; width: 100%; margin: auto;">
+              <p>Os gerenciadores de pacote organizam os pacotes instalados no sistema e são responsáveis por:</p>
+              <ul style="text-align: justify;">
+                <li class="fragment"><p>Verificar checksums para ter certeza de que o pacote foi baixado sem erros;</p></li>
+                <li class="fragment"><p>Verificar a assinatura digital para autenticar a origem dos pacotes;</p></li>
+                <li class="fragment"><p>Atualizar um sistema e corrigir bugs (principalmente erros de segurança);</p></li>
+                <li class="fragment"><p>Agrupar pacotes de acordo com suas funcionalidades para reduzir confusões;</p></li>
+                <li class="fragment"><p>Gerir dependências para ter certeza de que um pacote só será instalado se todas
+                as suas dependências também estiverem, o que resolveu o problema conhecido
+                como "Inferno de dependências".</p></li>
+              </ul>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="font-size: 24px; text-align: justify;">
+              <p>Em várias distribuições existe uma forma gráfica de instalar aplicações.
+              Como é o caso da loja de aplicativos do Ubuntu, a Ubuntu Software:</p>
+            </div>
+            <img width="85%" src="imgs/ubuntu_software.png" alt=""/>
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="font-size: 24px; text-align: justify; width: 60%; margin: 50px auto;">
+              <p>Abaixo temos uma tabela com o nome do gerenciador de pacotes de cada distribuição.</p>
+            </div>
+            <div class="sticker" style="font-size: 24px; width: 50%; margin: auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Família de Distribuição</th>
+                  <th>Gerenciador de Pacote</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Archlinux</td>
+                  <td>pacman</td>
+                </tr>
+                <tr>
+                  <td>Debian</td>
+                  <td>apt</td>
+                </tr>
+                <tr>
+                  <td>Gentoo</td>
+                  <td>portage</td>
+                </tr>
+                <tr>
+                  <td>Redhat</td>
+                  <td>dnf/yum</td>
+                </tr>
+                <tr>
+                  <td>Slackware</td>
+                  <td>slackpkg</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="font-size: 28px; text-align: justify; width:80%; margin: auto;">
+              Mesmo com instaladores gráficos, a maioria dos usuários prefere fazer instalações via terminal por ser mais rápido.
+            Abaixo um exemplo de como instalar o openssh usando o gerenciador de pacotes do Ubuntu (apt):
+            </div>
+            <div class="terminal space shadow" style="width: 50%; margin: 50px auto;">
+              <div class="top">
+                <div class="btns">
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="circle red"></span>
+                </div>
+                <div class="title">bash</div>
+              </div>
+              <pre><span style="color: green">$ </span>sudo apt install openssh</pre>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="font-size: 28px; text-align: justify; width:80%; margin: auto;">
+            Exemplo de como desinstalar o openssh usando o gerenciador de pacotes do Ubuntu (apt):
+            </div>
+            <div class="terminal space shadow" style="width: 50%; margin: 50px auto;">
+              <div class="top">
+                <div class="btns">
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="circle red"></span>
+                </div>
+                <div class="title">bash</div>
+              </div>
+              <pre><span style="color: green">$ </span>sudo apt remove openssh</pre>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="font-size: 28px; text-align: justify; width:80%; margin: auto;">
+            Exemplo de como atualizar a base de dados do gerenciador de pacotes do Ubuntu (apt):
+            </div>
+            <div class="terminal space shadow" style="width: 50%; margin: 50px auto;">
+              <div class="top">
+                <div class="btns">
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="circle red"></span>
+                </div>
+                <div class="title">bash</div>
+              </div>
+              <pre><span style="color: green">$ </span>sudo apt update</pre>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="font-size: 28px; text-align: justify; width:80%; margin: auto;">
+            Exemplo de como aplicar (instalar) as atualizações disponíveis com o gerenciador de pacotes do Ubuntu (apt):
+            </div>
+            <div class="terminal space shadow" style="width: 50%; margin: 50px auto;">
+              <div class="top">
+                <div class="btns">
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="circle red"></span>
+                </div>
+                <div class="title">bash</div>
+              </div>
+              <pre><span style="color: green">$ </span>sudo apt upgrade</pre>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="font-size: 28px; text-align: justify; width:80%; margin: auto;">
+            Exemplo de como remover pacotes órfãos (pacotes que foram instalados como dependências mas que já não estão mais em uso):
+            </div>
+            <div class="terminal space shadow" style="width: 50%; margin: 50px auto;">
+              <div class="top">
+                <div class="btns">
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="circle red"></span>
+                </div>
+                <div class="title">bash</div>
+              </div>
+              <pre><span style="color: green">$ </span>sudo apt autoremove</pre>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h3>Gerenciadores de Pacotes</h3>
+            <div style="font-size: 28px; text-align: justify; width:80%; margin: auto;">
+            Exemplo de como buscar um pacote:
+            </div>
+            <div class="terminal space shadow" style="width: 50%; margin: 50px auto;">
+              <div class="top">
+                <div class="btns">
+                  <span class="circle yellow"></span>
+                  <span class="circle green"></span>
+                  <span class="circle red"></span>
+                </div>
+                <div class="title">bash</div>
+              </div>
+              <pre><span style="color: green">$ </span>sudo apt search &ltnome_do_pacote&gt</pre>
+            </div>
+          </section>
+				</section>
+
+
+        <!-- 6: Fim -->
+				<section style="text-align: left;">
+					<h1>Fim</h1>
+					<p>
+						- <a href="http://lcc.ufrn.br/~josivanmedeiros/">Meu Site Pessoal</a> <br>
+            - <a href="http://petcc.dimap.ufrn.br/">Site do PET</a> <br>
+						- <a href="#/0">Voltar ao início</a>
+					</p>
+        </section>
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        slideNumber: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+      //Reveal.on( 'fragmentshown', event => {
+      //  // event.fragment = the fragment DOM element
+      //  console.log(event.fragment);
+      //  //event.fragment.id = 'teste';
+      //} );
+
+		</script>
+
+	</body>
+</html>

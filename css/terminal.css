@@ -1,0 +1,53 @@
+.terminal pre {
+  padding: 15px;
+  margin: 0;
+  color: #7AFB4C;
+}
+.terminal {
+  background-color: #000;
+  width: 100%;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+.terminal .top {
+    background: #E8E6E8;
+    color: black;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+}
+.terminal .btns {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+}
+.terminal .circle {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-left: 2px;
+    border-width: 1px;
+    border-style: solid;
+}
+.title{
+  width: 100%;
+  font-size: 22px;
+    text-align: center;
+}
+.red { background: #EC6A5F; border-color: #D04E42; }
+.green { background: #64CC57; border-color: #4EA73B; }
+.yellow{ background: #F5C04F; border-color: #D6A13D; }
+.clear{clear: both;}
+.terminal .body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #7AFB4C;
+    padding: 10px;
+    overflow: auto;
+}
+.space {
+    margin: 25px;
+}
+.shadow { box-shadow: 0px 0px 10px rgba(0,0,0,.4)}

@@ -1,0 +1,52 @@
+.distros img {
+    max-width: none;
+    max-height: none;
+}
+.familia-debian img
+{
+    margin-left: auto;
+    margin-top: -30px;
+    width: 45%;
+}
+.ubuntu img
+{
+    margin-left: -800px;
+    margin-top: -1400px;
+    width: 250%;
+}
+.familia-slackware img
+{
+    margin-left: -160px;
+    margin-top: -2200px;
+    width: 140%;
+}
+.familia-redhat img
+{
+    margin-left: auto;
+    margin-top: -1970px;
+    width: 95%;
+}
+.familia-gentoo img
+{
+    margin-left: -660px;
+    margin-top: -5200px;
+    width: 195%;
+}
+.familia-archlinux img
+{
+    margin-left: -880px;
+    margin-top: -6380px;
+    width: 220%;
+}
+.manjaro img
+{
+    margin-left: -1200px;
+    margin-top: -7600px;
+    width: 250%;
+}
+.familia-android img
+{
+    margin-left: -1300px;
+    margin-top: -9700px;
+    width: 250%;
+}
