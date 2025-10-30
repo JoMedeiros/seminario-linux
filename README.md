@@ -4,10 +4,11 @@
   </a>
   <br><br>
 </p>
-
 # Seminário PET - Introdução ao GNU/Linux
 
-Link da apresentação [aqui](https://jomedeiros.github.io/seminario-linux/).
+## TODO
+- [ ] Gravar
+- [ ] Colocar o link do vídeo nesse README
 
 ## Licença
 
