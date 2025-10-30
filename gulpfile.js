@@ -6,16 +6,15 @@ const colors = require('colors')
 const qunit = require('node-qunit-puppeteer')
 
 const {rollup} = require('rollup')
-const {terser} = require('rollup-plugin-terser')
+const terser = require('@rollup/plugin-terser')
 const babel = require('@rollup/plugin-babel').default
 const commonjs = require('@rollup/plugin-commonjs')
 const resolve = require('@rollup/plugin-node-resolve').default
+const sass = require('sass')
 
 const gulp = require('gulp')
-const tap = require('gulp-tap')
 const zip = require('gulp-zip')
-const sass = require('gulp-sass')
-const header = require('gulp-header')
+const header = require('gulp-header-comment')
 const eslint = require('gulp-eslint')
 const minify = require('gulp-clean-css')
 const connect = require('gulp-connect')
@@ -23,6 +22,7 @@ const autoprefixer = require('gulp-autoprefixer')
 
 const root = yargs.argv.root || '.'
 const port = yargs.argv.port || 8000
+const host = yargs.argv.host || 'localhost'
 
 const banner = `/*!
 * reveal.js ${pkg.version}
